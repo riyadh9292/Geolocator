@@ -1,0 +1,20 @@
+{% extends 'measurements/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+calculate distance
+{% endblock title %}
+
+{% block content %}
+
+
+<h1>this is heading</h1>
+<form class="" autocomplete="off" method="post">
+  {% csrf_token %}
+  {{form|crispy}}
+  <button type="submit" class="btn btn-primary" name="button">Check</button>
+
+</form>
+<br>
+
+{% endblock content %}
